@@ -1,42 +1,154 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #444;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20232a;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+}
+
+nav input {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+nav button {
+  padding: 5px 10px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #20232a;
+}
+
+nav button:hover {
+  background-color: #21a1f1;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-grid h3 {
   text-align: center;
+  margin: 10px 0 0;
+  font-size: 18px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Movie Detail Page */
+.movie-detail {
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-detail img {
+  max-width: 300px;
+  border-radius: 8px;
+  float: left;
+  margin-right: 20px;
+}
+
+.movie-detail p {
+  line-height: 1.6;
+}
+
+.movie-detail h2 {
+  margin-top: 0;
+}
+
+/* Cast Grid */
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cast-grid img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.cast-grid p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 5px 15px;
+  margin: 0 5px;
+  border: none;
+  background-color: #20232a;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #61dafb;
+}
+
+.pagination button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav form {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav input {
+    margin-bottom: 10px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .movie-detail img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
