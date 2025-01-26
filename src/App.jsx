@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/top-rated" element={<TopRatedPage />} />
+        
         <Route path="/upcoming" element={<UpcomingPage />} />
         <Route path="/movie/:id" element={<MovieDetailPage />} />
         <Route path="/search" element={<SearchPage />} />
